@@ -119,7 +119,7 @@ bool isKnownFile(HANDLE hObj)
 }
 
 void* ori_CloseHandle = 0;
-bool CloseHandle_detour(HANDLE hObj)
+bool __stdcall CloseHandle_detour(HANDLE hObj)
 {
     if (isFileObj(hObj))
     {
